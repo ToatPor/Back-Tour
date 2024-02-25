@@ -1,0 +1,17 @@
+extends baseEmail
+block content
+        p Hi #{firstName},
+        p Verify login Please enter token
+        p Your token is #{token} verify code in the app to verify email address to complete
+        p Token will expire in 30 minutes. Please verify to this url
+        table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+                tr
+                    td(align='left')
+                        table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                            tbody
+                                tr
+                                    td
+                                        a(href=`${url}`, target='_blank') Verify otp
+        p Please don't hesitate to contact me!
+    
